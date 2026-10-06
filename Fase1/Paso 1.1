@@ -1,0 +1,37 @@
+Diseño del Diagrama de Flujo del Enjambre
+
+                      ┌─────────────────────┐
+                      │   TÚ (Director)     │
+                      │  Asigna el tema     │
+                      └─────────┬───────────┘
+                                │
+                      ┌─────────▼───────────┐
+                      │  AGENTE 1: BUSCADOR │
+                      │  (ChatGPT + Web)    │
+                      └─────────┬───────────┘
+                                │ Fuentes
+                      ┌─────────▼───────────┐
+                      │  AGENTE 2: LECTOR   │
+                      │  (NotebookLM)       │
+                      └─────────┬───────────┘
+                                │ Resúmenes
+                      ┌─────────▼───────────┐
+                      │  AGENTE 3: ORGANIZADOR│
+                      │  (ChatGPT - Tablas) │
+                      └─────────┬───────────┘
+                                │ Tabla estructurada
+                      ┌─────────▼───────────┐
+                      │  AGENTE 4: REDACTOR │
+                      │  (ChatGPT)          │
+                      └─────────┬───────────┘
+                                │ Informe
+                      ┌─────────▼───────────┐
+                      │  AGENTE 5: CRÍTICO  │
+                      │  (ChatGPT)          │
+                      └─────────┬───────────┘
+                                │
+                      ┌─────────▼───────────┐
+                      │ ¿Aprobado?          │
+                      │ NO → Redactor (bucle)│
+                      │ SÍ → FIN            │
+                      └─────────────────────┘
